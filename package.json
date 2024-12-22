@@ -1,6 +1,6 @@
 {
   "name": "file-tree-cli",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "A powerful and flexible command-line tool for visualizing directory structures with advanced features and customization options.",
   "main": "dist/index.js",
   "bin": {
