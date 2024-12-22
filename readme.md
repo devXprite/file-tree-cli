@@ -23,7 +23,7 @@
 You can run the CLI tool directly using npx without installation:
 
 ```bash
-npx file-tree-cli [options] [directory]
+npx file-tree-cli 
 ```
 
 If you prefer to install it globally (optional):
