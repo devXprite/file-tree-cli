@@ -1,6 +1,5 @@
 <div align="center">
   <h2>File Tree CLI</h2>
-    <!-- <img src="./public/logo.svg" alt="MoviesPrix" width="250" /> -->
   <p>A modern CLI tool for visualizing directory structures with advanced filtering and display options.</p>
 </div>
 
@@ -19,16 +18,19 @@
 - 💾 Save output to file
 - ⚡ Performance optimized
 
-## Installation
+## Usage
+
+You can run the CLI tool directly using npx without installation:
+
+```bash
+npx file-tree-cli [options] [directory]
+```
+
+If you prefer to install it globally (optional):
 
 ```bash
 npm install -g file-tree-cli
-```
-
-## Usage
-
-```bash
-tree [options] [directory]
+file-tree [options] [directory]
 ```
 
 If no directory is specified, the current directory will be used.
@@ -37,56 +39,56 @@ If no directory is specified, the current directory will be used.
 
 ```bash
 # Display tree of current directory
-tree
+npx file-tree-cli
 
 # Display tree of specific directory
-tree /path/to/directory
+npx file-tree-cli /path/to/directory
 
 # Show tree with file sizes
-tree -s
+npx file-tree-cli -s
 
 # Show only JavaScript and TypeScript files
-tree --ext js,ts
+npx file-tree-cli --ext js,ts
 
 # Show files modified dates and sizes
-tree -s -m
+npx file-tree-cli -s -m
 ```
 
 ### Advanced Examples
 
 ```bash
 # Show only directories, sorted by name
-tree --dirs-only --sort name
+npx file-tree-cli --dirs-only --sort name
 
 # Show only JavaScript files and their sizes
-tree --ext js -s
+npx file-tree-cli --ext js -s
 
 # Show tree with custom depth and excluded directories
-tree -d 3 -e "dist,coverage"
+npx file-tree-cli -d 3 -e "dist,coverage"
 
 # Show all files (including hidden) sorted by size
-tree -a --sort size
+npx file-tree-cli -a --sort size
 
 # Export tree to a file
-tree -o output.txt
+npx file-tree-cli -o output.txt
 ```
 
 ## Options
 
-| Option                     | Description                                    |
-| -------------------------- | ---------------------------------------------- |
-| `-d, --max-depth <number>` | Maximum depth to traverse                      |
-| `-a, --all`                | Show hidden files                              |
-| `-e, --exclude <items>`    | Comma-separated list of directories to exclude |
-| `-s, --show-size`          | Show file sizes                                |
-| `-m, --modified`           | Show last modified date                        |
-| `-f, --pattern <pattern>`  | Filter items by regex pattern                  |
-| `--ext <extensions>`       | Filter by file extensions (comma-separated)    |
-| `--sort <type>`            | Sort items by: name, size, or date             |
-| `-r, --reverse`            | Reverse sort order                             |
-| `--dirs-only`              | Show only directories                          |
-| `--files-only`             | Show only files                                |
-| `-o, --output <file>`      | Save output to file                            |
+| Option                     | Description                                    | Default |
+| -------------------------- | ---------------------------------------------- | ------- |
+| `-d, --max-depth <number>` | Maximum depth to traverse                      | ∞       |
+| `-a, --all`                | Show hidden files                              | false   |
+| `-e, --exclude <items>`    | Comma-separated list of directories to exclude | []      |
+| `-s, --show-size`          | Show file sizes                                | false   |
+| `-m, --modified`           | Show last modified date                        | false   |
+| `-f, --pattern <pattern>`  | Filter items by regex pattern                  | null    |
+| `--ext <extensions>`       | Filter by file extensions (comma-separated)    | []      |
+| `--sort <type>`            | Sort items by: name, size, or date             | name    |
+| `-r, --reverse`            | Reverse sort order                             | false   |
+| `--dirs-only`              | Show only directories                          | false   |
+| `--files-only`             | Show only files                                | false   |
+| `-o, --output <file>`      | Save output to file                            | null    |
 
 ## Output Format
 
@@ -109,6 +111,7 @@ git clone https://github.com/devxprite/file-tree-cli.git
 
 2. Install dependencies:
 ```bash
+cd file-tree-cli
 npm install
 ```
 
@@ -117,15 +120,26 @@ npm install
 npm run build
 ```
 
-4. Link for local development:
+4. Test locally:
 ```bash
+# Run directly from the project directory
+npm start
+
+# Or use npm link for global testing
 npm link
+tree [options] [directory]
 ```
 
 ## Contributing
 
-Contributions are welcome! Please feel free to submit a Pull Request.
+Contributions are welcome! Here's how you can contribute:
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
 
 ## License
 
-MIT
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.

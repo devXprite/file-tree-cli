@@ -5,6 +5,7 @@
   "main": "dist/index.js",
   "bin": {
     "tree": "./dist/index.js",
+    "treee": "./dist/index.js",
     "file-tree": "./dist/index.js",
     "file-tree-cli": "./dist/index.js"
   },
