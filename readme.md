@@ -5,7 +5,7 @@
 
 ## Features
 
-- 🎨 Colorized output (directories in blue, files in cyan)
+- 🎨 Colorized output
 - 📏 Configurable directory traversal depth
 - 🔍 Multiple filtering options:
   - File extensions
