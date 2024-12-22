@@ -1,0 +1,27 @@
+<svg viewBox="0 0 800 200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="800" height="200" fill="#f5f5f5"/>
+  
+  <!-- Folder icons -->
+  <g fill="#2196F3">
+    <path d="M 100 60 h 40 l 10 -10 h 60 v 30 h -110 z"/>
+    <path d="M 140 100 h 30 l 10 -10 h 40 v 30 h -80 z"/>
+    <path d="M 160 140 h 20 l 10 -10 h 30 v 30 h -60 z"/>
+  </g>
+  
+  <!-- Connection lines -->
+  <g stroke="#2196F3" stroke-width="2">
+    <line x1="120" y1="80" x2="120" y2="100"/>
+    <line x1="150" y1="120" x2="150" y2="140"/>
+  </g>
+  
+  <!-- Text -->
+  <text x="280" y="110" font-family="Arial, sans-serif" font-weight="bold" font-size="48" fill="#333">
+    File Tree CLI
+  </text>
+  
+  <!-- Subtitle -->
+  <text x="280" y="140" font-family="Arial, sans-serif" font-size="20" fill="#666">
+    Modern directory visualization tool
+  </text>
+</svg>

@@ -1,0 +1,63 @@
+{
+  "name": "file-tree-cli",
+  "version": "0.0.1",
+  "description": "A powerful and flexible command-line tool for visualizing directory structures with advanced features and customization options.",
+  "main": "dist/index.js",
+  "bin": {
+    "tree": "./dist/index.js",
+    "file-tree": "./dist/index.js",
+    "file-tree-cli": "./dist/index.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "start": "ts-node src/index.ts",
+    "prepublishOnly": "npm run build",
+    "dev": "ts-node src/index.ts",
+    "clean": "rm -rf dist",
+    "prebuild": "npm run clean",
+    "format": "prettier --write \"src/**/*.ts\"",
+    "format:check": "prettier --check \"src/**/*.ts\""
+  },
+  "license": "MIT",
+  "private": false,
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "keywords": [
+    "cli",
+    "file-tree",
+    "directory",
+    "visualization",
+    "tree",
+    "filesystem"
+  ],
+  "author": {
+    "name": "Prateek Sing",
+    "email": "devxprite@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/devxprite/file-tree-cli.git"
+  },
+  "bugs": {
+    "url": "https://github.com/devxprite/file-tree-cli/issues"
+  },
+  "homepage": "https://github.com/devxprite/file-tree-cli#readme",
+  "engines": {
+    "node": ">=12.0.0"
+  },
+  "dependencies": {
+    "colorette": "^2.0.20",
+    "commander": "^12.1.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.2",
+    "@typescript-eslint/eslint-plugin": "^6.0.0",
+    "@typescript-eslint/parser": "^6.0.0",
+    "eslint": "^8.0.0",
+    "prettier": "^3.4.2",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.7.2"
+  }
+}
